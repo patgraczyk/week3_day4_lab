@@ -35,5 +35,8 @@ casting4.save()
 casting5.save()
 casting6.save()
 
+p casting1.movies
+p casting2.stars
+p movie1.stars 
 # binding.pry
 # nil

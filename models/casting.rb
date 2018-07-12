@@ -24,4 +24,18 @@ def self.delete_all()
   SqlRunner.run(sql)
 end
 
+def movies()
+  sql="SELECT * FROM movies WHERE id = $1"
+  values =[@movie_id]
+  movie=SqlRunner.run(sql, values).first
+  return Movie.new(movie)
+end
+
+def stars()
+  sql="SELECT * FROM stars WHERE id = $1"
+  values =[@star_id]
+  star=SqlRunner.run(sql, values).first
+  return Star.new(star)
+end
+
 end
